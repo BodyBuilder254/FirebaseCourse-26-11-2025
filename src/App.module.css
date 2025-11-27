@@ -1,6 +1,19 @@
 
-.myDiv{
+.myNav{
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: blue;
+  margin-bottom: 10px;
+}
+.myNav a{
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+.myNav a:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }

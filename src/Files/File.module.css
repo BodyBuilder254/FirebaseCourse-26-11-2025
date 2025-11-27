@@ -1,0 +1,34 @@
+
+.myContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+}
+.myContainer input{
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    max-width: fit-content;
+}
+.myContainer button{
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: blue;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:  0.5s ease;
+}
+.myContainer button:hover{
+    background-color: blueviolet;
+}
+.myContainer img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
