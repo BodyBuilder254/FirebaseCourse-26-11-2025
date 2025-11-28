@@ -23,39 +23,31 @@ function Auth(){
         else if(!(email.includes("@") || email.includes("."))){
             window.alert("Invalid Email Address");
         }
-        else if(auth.currentUser){
-            window.alert("You are already signed in");
-        }
         else{
             try{
                 await createUserWithEmailAndPassword(auth, email, password);
             }catch(error){
                 console.error(error);
+                window.alert("You are already signed in");
             }
         }    
     }
 
     async function goggleSignIn(){
-        if(auth.currentUser){
+        try{
+            await signInWithPopup(auth, googleProvider);
+        }catch(error){
+            console.error(error);
             window.alert("You are already signed in");
         }
-        else{
-            try{
-                await signInWithPopup(auth, googleProvider);
-            }catch(error){
-                console.error(error);
-            }
-        } 
     }
 
     function handleSignOut(){
-        if(!(auth.currentUser)){
-            window.alert("You are not signed in");
-        }
         try{
             signOut(auth);
         }catch(error){
             console.error(error);
+            window.alert("You are not signed in");
         }
     }
 
